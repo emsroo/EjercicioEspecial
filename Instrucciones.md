@@ -2,7 +2,7 @@
 
 ## Lee cuidadosamente todas las instrucciones antes de comenzar
 
----
+<!-- ---
 
 ### Parte 1
 
@@ -11,17 +11,17 @@
 3. Modifica el archivo README.md para agregar el número de Cohorte, la fecha, hora  y tu nombre (de preferencia en un lista).
 4. Debes guardar los cambios en el repositorio local y posteriormente subirlos a Github. (Commit No. 1)
 
----
+--- -->
 
 ### Parte 2
-
+<!-- 
 1. Entrar al directorio **html** y crear un directorio llamado **js** para almacenar un archivo **main.js**
 
-2. Crear el archivo **main.js** dentro del directorio **js**
+2. Crear el archivo **main.js** dentro del directorio **js** -->
 
-3. Vincular el archivo **main.js** dentro del archivo **products.html** 
+<!-- 3. Vincular el archivo **main.js** dentro del archivo **products.html**  -->
 
-4. Dentro del archivo **main.js** crear una función para responder al evento **click** del botón con el texto **Load Products** que se encuentra en products.html
+<!-- 4. Dentro del archivo **main.js** crear una función para responder al evento **click** del botón con el texto **Load Products** que se encuentra en products.html -->
 
 5. Dicho evento debe realizar una llamada a la siguiente API : https://api.escuelajs.co/api/v1/products
 
