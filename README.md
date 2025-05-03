@@ -4,11 +4,8 @@ Ejercicio Evaluado Especial
 
 Favor de leer los pasos a seguir en el archivo Instrucciones.md
 
-- 
-- 
-- 
-
-
+Property | Description |
+--- | --- | ---
 | Numero de Cohorte | CH53     |
 | Fecha  |3  mayo 2025   4.41 pm     |
 | Nombre  |Emmanuel Rojas Ramirez  | 
