@@ -56,12 +56,61 @@ function createCards(prods) {
     console.log(preCards);
     
     preCards.forEach((element, index) => {
+        //identifica donde modificar e inserta alrededor para title
       const cardText = element.querySelector('.card-text');
-      if (cardText){
-        cardText.innerText= `${index} ${prods[index].description}`
+      const textbodysecondary = element.getElementsByClassName("text-body-secondary")[0];  //why getelementbycass doesnt work oporque regresa una lista, puedes usar queryselector
+      const cardImage = element.getElementsByClassName("bd-placeholder-img card-img-top")[0];
+        //REVISA QUE EXISTA 
+      if (cardText && textbodysecondary && cardImage){
+        // insertar un titulo 
+        cardText.insertAdjacentHTML("beforebegin",
+        `<h5 class="card-title">${prods[index].title}</h5>`);  
+        // inserta descriptcion
+        cardText.innerHTML= `${prods[index].description.slice(0,50)}`
+
+        //inserta precio 
+        textbodysecondary.innerHTML = `El precio es <b> $ ${prods[index].price} </b>`;
+
+        //insert second image 
+        cardImage.src= prods[index].images[1]; 
+
+        // cardText.innerHTML= `<h1> This is a way \n <\h1>` this is wrong
       };
     });
     };
+
+
+
+    // // se me paso usar el thumbnail que ya venia, ahora lo voy a eliminar de todos lados con JS 
+    // document.addEventListener('DOMContentLoaded', (event) => {
+    //     // Selecciona todos los elementos SVG con la clase bd-placeholder-img
+    //     console.log("Evento DOMContentLoaded disparado. El DOM está listo."); // Confirma que el evento se ejecuta
+
+    //     const placeholderSVGs = document.querySelectorAll('svg.bd-placeholder-img');
+    //     console.log("Resultado de querySelectorAll('.bd-placeholder-img'):", placeholderSVGs); // Muestra la lista de SVGs encontrados
+    //     console.log("Número de SVGs encontrados:", placeholderSVGs.length);
+
+    //     // Itera sobre cada SVG encontrado
+    //     placeholderSVGs.forEach((svg, index) => {
+    //         console.log(`Procesando el SVG número ${index}:`, svg); // Muestra cada SVG individual
+
+    //         // Busca el elemento <text> dentro del SVG actual
+    //         const textElement = svg.querySelector('text');
+    //         console.log(`Elemento <text> dentro del SVG ${index}:`, textElement); // Muestra el elemento text (será 'null' si no lo encuentra)
+
+    //         // Si se encuentra el elemento text, vacía su contenido
+    //         if (textElement) {
+    //             textElement.textContent = ''; // O textElement.innerText = '';
+    //             console.log(`Texto eliminado del SVG número ${index}`); // Confirma que el texto se eliminó
+
+    //             // O podrías eliminar el elemento <text> completamente:
+    //             // textElement.remove();
+    //         }
+    //     });
+    // });
+
+
+
     // preCards.forEach(element => {
       
 
